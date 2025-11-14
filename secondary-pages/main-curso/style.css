@@ -142,6 +142,75 @@ header {
   visibility: visible;
 }
 
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5em;
+  margin-top: 40px;
+  padding: 0 60px 50px 60px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 20px;
+}
+
+.card .icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(50, 163, 189);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+.card .icon-wrapper i {
+  color: white;
+  font-size: 20px;
+}
+
+/* cores dos icones */
+
+.card.matematica .icon-wrapper {
+  background-color: #3B82F6; 
+}
+
+.card.portugues .icon-wrapper {
+  background-color: #F472B6; 
+}
+
+.card.historia .icon-wrapper {
+  background-color: #F59E0B; 
+}
+
+.card.biologia .icon-wrapper {
+  background-color: #34D399;
+}
+
+
+
+.atividades-counter {
+  display: flex;
+  margin-top: 10px ;
+  color: rgba(0, 0, 0, 0.509);
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
 @media (max-width: 768px) {
   header {
     padding: 1em;
