@@ -1,17 +1,15 @@
-// hamburguer funcional
+const cards = document.querySelectorAll(".card");
+const cardContent = document.querySelector(".card-content");
 
-const hamburger = document.getElementById("hamburger");
-const menuLateral = document.getElementById("menu-lateral");
-const overlay = document.createElement("div");
-overlay.classList.add("overlay");
-document.body.appendChild(overlay);
-
-hamburger.addEventListener("click", () => {
-  menuLateral.classList.toggle("active");
-  overlay.classList.toggle("active");
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    document.querySelector(".card-wrapper").style.display = "none";
+    cardContent.classList.add("show");
+  });
 });
 
-overlay.addEventListener("click", () => {
-  menuLateral.classList.remove("active");
-  overlay.classList.remove("active");
+document.querySelector(".card-content button").addEventListener("click", () => {
+  cardContent.classList.remove("show");
+  document.querySelector(".card-wrapper").style.display = "grid";
 });
+

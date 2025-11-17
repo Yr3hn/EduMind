@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/general-config/geral.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <title>Document</title>
@@ -84,7 +85,38 @@
         </div>  <!--atividades-counter-->
       </button> <!--card-->
     </div> <!--card-wrapper-->
+    <!--card-content-->
+    <div class="card-content">
+      <button>
+        <i class="fa-solid fa-chevron-left"></i>
+        <span>Voltar para cursos</span>
+      </button>
+      <div class="content-materia">
+        <span>"Nome da materia"</span>
+        <p>"Nome do professor"</p>
+      </div>
+      <p style="padding: 10px">Atividades</p>
+      <div class="wrapper-atividades">
+        <div class="card-atividades">        
+          <span class="titulo-atividade">Exercícios de Álgebra</span>        
+          <div class="entrega">
+            <i class="fa-regular fa-clock"></i>
+            <span>Entrega: 09/11/2025</span>
+            <span class="status-entregue">Entregue</span>
+          </div>
+        </div>
+        <div class="card-atividades">
+          <span class="titulo-atividade">Prova - Equações</span>
+          <div class="entrega">
+            <i class="fa-regular fa-clock"></i>
+            <span>Entrega: 09/11/2025</span>
+            <span class="status-pendente">Pendente</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
+  <script src="/general-config/geral.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
