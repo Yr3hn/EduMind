@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/general-config/geral.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>EduWeb - Área do Professor</title>
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <div class="icon-pfp">
+        <img src="/main-page/imgs/pfp.webp" alt="Foto de perfil">
+      </div> <!--icon-pfp-->
+      <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div> <!--hamburguer-->
+    </div> <!--left-header-->
+    <div class="title">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <p class="main-title">EduWeb</p>
+      <p class="subtitle">Área do Professor</p>
+    </div> <!--title-->
+    <div class="bell-icon">
+      <i class="fa-solid fa-bell"></i>
+    </div> <!--bell-icon-->
+  </header>
+  <nav class="menu-lateral" id="menu-lateral">
+    <ul>
+      <img src="/main-page/imgs/pfp.webp" alt="Foto de perfil">
+      <li><a href="/main-page/index.html">Início</a></li>
+      <li><a href="/main-page/perfil-page/index.html">Perfil</a></li>
+      <li><a href="/main-page/chat-page/index.html">Chat</a></li>
+      <li><a href="/main-page/config-page/index.html">Configurações</a></li>
+    </ul>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+  <main>
+    <div class="main-buttons">
+      <button class="main-btn" id="btnCursos">
+        <i class="fa-solid fa-book-open"></i>
+        <div class="text-content">
+          <h3>Cursos</h3>
+          <p>Acesse suas matérias e atividades</p>
+        </div> <!--text-content-->
+      </button>
+
+      <button class="main-btn" id="btnAulas">
+        <i class="fa-solid fa-video"></i>
+        <div class="text-content">
+          <h3>Aulas</h3>
+          <p>Assista aulas gravadas ou ao vivo</p>
+        </div> <!--text-content-->
+      </button>
+
+      <button class="main-btn" id="btnNotas">
+        <i class="fa-solid fa-chart-simple"></i>
+        <div class="text-content">
+          <h3>Notas e Presenças</h3>
+          <p>Acompanhe seu desempenho</p>
+        </div> <!--text-content-->
+      </button>
+    </div> <!--main-buttons-->
+  </main>
+  <script src="/general-config/geral.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
