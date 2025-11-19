@@ -87,7 +87,7 @@
 }
 
 .card-content button i {
-  margin-right: 0; /* já tem o gap, não precisa isso */
+  margin-right: 0; 
 }
 
 .content-materia {

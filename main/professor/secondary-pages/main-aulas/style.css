@@ -78,12 +78,6 @@
   color: white;
   cursor: pointer;
   box-shadow: 0 3px 10px #1e293b49;
-
-  transition: background 0.3s ease;
-}
-
-.gravar button:hover {
-  background: #af2cd3e8;
 }
 
 /* card aulas */
@@ -316,6 +310,150 @@
   transform: translateY(10px);
   pointer-events: none;
 }
+
+/* Fundo do modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+/* Caixa do modal (branca) */
+.modal-content {
+  background: #fff;
+  width: 550px;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 4px 35px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Título */
+.modal-content h1 {
+  font-size: 24px;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+/* Subtítulo */
+.modal-subtitle {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* X fechar */
+.close-modal {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+/* Campo */
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.modal-field label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal-field input,
+.modal-field select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+}
+
+.modal-field input:focus,
+.modal-field select:focus {
+  border-color: #7c3aed;
+}
+
+/* Botões */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.modal-buttons .btn-transmissao {
+  background: linear-gradient(90deg, #c93535, #b91c1c);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-transmissao:hover {
+  opacity: 0.9;
+}
+
+.btn-cancelar {
+  background: #f3f4f6;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  background: #e5e7eb;
+}
+
+.btn-enviar {
+  background: linear-gradient(90deg, #a855f7, #7c3aed);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-enviar:hover {
+  opacity: 0.9;
+}
+
 
 @media (max-width: 768px) {
   .card-aovivo {

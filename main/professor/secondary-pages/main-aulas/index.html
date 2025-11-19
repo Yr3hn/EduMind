@@ -53,7 +53,7 @@
     </div> <!--toggle-container-->
     <div class="gravar">
       <button>
-        <i></i> Enviar Gravação
+         <i class="fa-solid fa-upload"></i>Enviar Gravação
       </button>
     </div>
     <div class="cards-container">
@@ -150,6 +150,63 @@
         </div> <!--button-aguardar-->
       </div> <!--card-aovivo-->
     </div> <!--card-container-live-->
+    <!--enviar e começar-->
+    <div id="modal-gravacao" class="modal hidden">
+      <div class="modal-content">
+        
+        <button class="close-modal">&times;</button>
+      
+        <h1>Enviar Gravação</h1>
+        <p class="modal-subtitle">Faça upload de uma aula gravada</p>
+      
+        <div class="modal-field">
+          <label>Título da Aula</label>
+          <input type="text" placeholder="Ex: Introdução à Álgebra Linear">
+        </div>
+      
+        <div class="modal-field">
+          <label>Matéria</label>
+          <select>
+            <option value="" disabled selected>Selecione a matéria</option>
+          </select>
+        </div>
+      
+        <div class="modal-field">
+          <label>Arquivo de Vídeo</label>
+          <input type="file">
+        </div>
+      
+        <div class="modal-buttons">
+          <button class="btn-cancelar">Cancelar</button>
+          <button class="btn-enviar"><i class="fa-solid fa-upload"></i> Enviar Vídeo</button>
+        </div>
+      
+      </div>
+    </div>
+    <div id="modal-aovivo" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h1>Iniciar aula ao vivo</h1>
+      <p class="modal-subtitle">Configure sua aula ao vivo</p>
+    
+      <div class="modal-field">
+        <label>Título da Aula</label>
+        <input type="text" placeholder="Ex: Introdução à Álgebra Linear">
+      </div>
+    
+      <div class="modal-field">
+        <label>Matéria</label>
+        <select>
+          <option value="" disabled selected>Selecione a matéria</option>
+        </select>
+      </div>
+    
+      <div class="modal-buttons">
+        <button class="btn-cancelar">Cancelar</button>
+        <button class="btn-transmissao"><i class="fa-solid fa-broadcast-tower"></i> Iniciar transmissão</button>
+      </div>
+    </div>
+  </div>
   </main> 
   <script src="/general-config/geral.js"></script>
   <script src="script.js"></script>
