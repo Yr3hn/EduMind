@@ -1,0 +1,237 @@
+/*
+ * ASSUMINDO QUE O ARQUIVO 'geral.css' CONTÉM:
+ * - Estilização básica do 'header', 'nav', 'body', 'main'.
+ * - Estilização da classe base 'main-btn' (padding, background, border-radius, hover).
+ */
+
+/* --- Estilo Geral da Main --- */
+main {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.main-buttons {
+    /* Centraliza o contêiner principal da página */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 1. Card de Cabeçalho do Perfil --- */
+
+.profile-header-card {
+    display: flex;
+    align-items: center;
+    /* Fundo verde conforme a imagem */
+    background-color: #e8f5e9; 
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-picture-wrapper {
+    position: relative;
+    margin-right: 20px;
+}
+
+.profile-pfp-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+}
+
+.change-photo-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.profile-header-card .text-content h2 {
+    margin: 0 0 2px;
+    color: #333;
+    font-weight: 700;
+}
+
+.profile-header-card .text-content p {
+    color: #555;
+    margin: 0 0 10px;
+    font-size: 0.9em;
+}
+
+.edit-profile-btn {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.edit-profile-btn i {
+    margin-right: 8px;
+}
+
+/* --- 2. Títulos de Seção --- */
+
+.section-title {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 30px 0 15px 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    margin-right: 10px;
+    color: #4CAF50;
+}
+
+/* --- 3. Container dos Cards de Informação (Correção de Layout) --- */
+
+.info-cards-container {
+    /* Define o layout de grid: 4 colunas iguais com espaçamento de 10px */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn.info-btn {
+    /* Sobrescreve 'main-btn' para layout vertical */
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; /* Alinhamento à esquerda, como na imagem */
+    justify-content: flex-start;
+    padding: 15px;
+    height: 120px; 
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.info-btn i:first-child {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #4CAF50; /* Ícones em verde */
+}
+
+.info-btn .text-content {
+    flex-grow: 0; 
+    margin: 0;
+}
+
+.info-btn .text-content h3 {
+    font-size: 0.9em;
+    margin: 0;
+    font-weight: 600;
+}
+
+.info-btn .text-content p {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #666;
+    margin: 2px 0 0;
+    /* Adiciona a seta pequena para indicar clique */
+    position: relative;
+    padding-right: 10px; 
+}
+
+/* Adiciona a seta pequena no final do texto (simulando o ícone) */
+.info-btn .text-content p:after {
+    content: '>';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: #aaa;
+}
+
+/* Remove o ícone de seta original que estava desalinhado */
+.info-btn .edit-icon {
+    display: none; 
+}
+
+
+/* --- 4. Botão de Logout (Correção de Tamanho) --- */
+
+.logout-btn {
+    /* Remove o preenchimento lateral excessivo do 'main-btn' padrão */
+    width: auto; 
+    padding: 15px 20px;
+    /* Fundo vermelho conforme a imagem */
+    background-color: #dc3545; 
+    border-radius: 8px;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.logout-btn i {
+    /* Ícone em branco */
+    color: white !important; 
+    font-size: 1.4em;
+    margin-right: 15px;
+}
+
+.logout-btn .text-content h3 {
+    color: white;
+    margin-bottom: 2px;
+}
+.logout-btn .text-content p {
+    color: #f8d7da; /* Um vermelho mais claro para a descrição */
+    font-size: 0.8em;
+}
+
+/* --- 5. Responsividade (Opcional, mas recomendado) --- */
+
+@media (max-width: 900px) {
+    /* Em telas médias, 2 colunas */
+    .info-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    /* Em telas pequenas, 1 coluna */
+    .info-cards-container {
+        grid-template-columns: 1fr;
+    }
+    .profile-header-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-picture-wrapper {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .logout-btn {
+        max-width: 100%;
+    }
+}

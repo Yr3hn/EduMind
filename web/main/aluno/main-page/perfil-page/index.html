@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../../general-config/geral.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>EduWeb - Perfil do Aluno</title>
+  </head>
+  <body>
+    <header>
+      <div class="left-header">
+        <div class="icon-pfp">
+          <img
+            src="../../../general-config/img/pfp.webp"
+            alt="Foto de perfil"
+          />
+        </div>
+        <div class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="title">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <p class="main-title">EduWeb</p>
+        <p class="subtitle">Perfil do Aluno</p>
+      </div>
+      <div class="bell-icon">
+        <i class="fa-solid fa-bell"></i>
+      </div>
+    </header>
+
+    <nav class="menu-lateral" id="menu-lateral">
+      <ul>
+        <img src="../../../general-config/img/pfp.webp" alt="Foto de perfil" />
+        <li><a href="../../main-page/index.html">Início</a></li>
+        <li>
+          <a href="/main/aluno/main-page/perfil-page/index.html">Perfil</a>
+        </li>
+        <li><a href="/main/aluno/main-page/chat-page/index.html">Chat</a></li>
+        <li>
+          <a href="/main/aluno/main-page/config-page/index.html"
+            >Configurações</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+      <div class="main-buttons profile-section">
+        <div class="profile-header-card">
+          <div class="profile-picture-wrapper">
+            <img
+              src="../../../general-config/img/pfp.webp"
+              alt="Foto de perfil do Aluno"
+              class="profile-pfp-large"
+              id="profileImage"
+            />
+            <button
+              class="change-photo-btn"
+              onclick="document.getElementById('fileInput').click()"
+            >
+              <i class="fa-solid fa-camera"></i>
+            </button>
+            <input type="file" id="fileInput" accept="image/*" hidden />
+          </div>
+          <div class="text-content">
+            <h2>Nome do Aluno</h2>
+            <p>Matrícula: 123456</p>
+            <button class="edit-profile-btn">
+              <i class="fa-solid fa-pen"></i> Editar Perfil Completo
+            </button>
+          </div>
+        </div>
+
+        <h3 class="section-title">
+          <i class="fa-solid fa-user-gear"></i> Dados Pessoais e Contato
+        </h3>
+
+        <div class="info-cards-container">
+          <button class="main-btn info-btn" id="btnEmail">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="text-content">
+              <h3>Email</h3>
+              <p id="email">aluno.exemplo@eduweb.com.br</p>
+            </div>
+          </button>
+
+          <button class="main-btn info-btn" id="btnTelefone">
+            <i class="fa-solid fa-phone"></i>
+            <div class="text-content">
+              <h3>Telefone</h3>
+              <p id="telefone">(11) 98765-4321</p>
+            </div>
+          </button>
+
+          <button class="main-btn info-btn" id="btnEndereco">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="text-content">
+              <h3>Endereço</h3>
+              <p id="endereco">Rua das Matérias, 404 - São Paulo</p>
+            </div>
+          </button>
+
+          <button class="main-btn info-btn" id="btnSenha">
+            <i class="fa-solid fa-lock"></i>
+            <div class="text-content">
+              <h3>Senha de Acesso</h3>
+              <p>Alterar senha</p>
+            </div>
+          </button>
+        </div>
+        <h3 class="section-title">
+          <i class="fa-solid fa-gear"></i> Outras Ações
+        </h3>
+
+        <button class="main-btn logout-btn">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <div class="text-content">
+            <h3>Sair da Conta</h3>
+            <p>Desconectar de todos os dispositivos</p>
+          </div>
+        </button>
+      </div>
+    </main>
+
+    <script src="../../../general-config/geral.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      document
+        .getElementById("fileInput")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              document.getElementById("profileImage").src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+    </script>
+  </body>
+</html>

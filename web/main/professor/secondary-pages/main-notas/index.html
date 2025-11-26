@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../../general-config/geral.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <div class="icon-pfp">
+        <img src="../../../general-config/img/pfp.webp" alt="Foto de perfil">
+      </div> <!--icon-pfp-->
+      <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div> <!--hamburguer-->
+    </div> <!--left-header-->
+    <div class="title">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <p class="main-title">EduWeb</p>
+      <p class="subtitle">Área do Professor</p>
+    </div> <!--title-->
+    <div class="bell-icon">
+      <i class="fa-solid fa-bell"></i>
+    </div> <!--bell-icon-->
+  </header>
+  <nav class="menu-lateral" id="menu-lateral">
+    <ul>
+      <img src="../../../general-config/img/pfp.webp" alt="Foto de perfil">
+      <li><a href="/EduWebApp/main/professor/main-page/index.html">Início</a></li>
+      <li><a href="/EduWebApp/main/professor/main-page/perfil-page/index.html">Perfil</a></li>
+      <li><a href="/EduWebApp/main/professor/main-page/chat-page/index.html">Chat</a></li>
+      <li><a href="/EduWebApp/main/professor/main-page/config-page/index.html">Configurações</a></li>
+    </ul>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+
+  <main class="presencas-container">
+    <!-- CARDS RESUMO -->
+    <section class="resumo-presencas">
+      <div class="card-resumo azul">
+        <i class="fa-solid fa-chart-simple"></i>
+        <p class="titulo">Média Geral</p>
+        <h2>8.5</h2>
+      </div>
+
+      <div class="card-resumo verde">
+        <i class="fa-solid fa-calendar-check"></i>
+        <p class="titulo">Presença Média</p>
+        <h2>97%</h2>
+      </div>
+
+      <div class="card-resumo roxo">
+        <i class="fa-solid fa-book"></i>
+        <p class="titulo">Matérias</p>
+        <h2>6</h2>
+      </div>
+    </section>
+
+    <!-- LISTA DE MATÉRIAS -->
+    <section class="lista-materias">
+
+      <div class="item-materia">
+        <div class="materia-esq">
+          <div class="icone-materia azul"><i class="fa-solid fa-chart-column"></i></div>
+          <div class="info">
+            <p class="nome">Matemática</p>
+            <span class="faltas">1 falta</span>
+          </div>
+        </div>
+        <div class="materia-dir">
+          <div class="nota">8.5</div>
+          <div class="barra">
+            <div class="fill" style="width: 95%;"></div>
+          </div>
+          <span class="percentual">95%</span>
+        </div>
+      </div>
+
+      <div class="item-materia">
+        <div class="materia-esq">
+          <div class="icone-materia roxo"><i class="fa-solid fa-chart-column"></i></div>
+          <div class="info">
+            <p class="nome">Português</p>
+            <span class="faltas">0 faltas</span>
+          </div>
+        </div>
+        <div class="materia-dir">
+          <div class="nota">9.0</div>
+          <div class="barra">
+            <div class="fill" style="width: 100%;"></div>
+          </div>
+          <span class="percentual">100%</span>
+        </div>
+      </div>
+
+      <div class="item-materia">
+        <div class="materia-esq">
+          <div class="icone-materia laranja"><i class="fa-solid fa-chart-column"></i></div>
+          <div class="info">
+            <p class="nome">História</p>
+            <span class="faltas">2 faltas</span>
+          </div>
+        </div>
+        <div class="materia-dir">
+          <div class="nota">7.5</div>
+          <div class="barra">
+            <div class="fill" style="width: 90%;"></div>
+          </div>
+          <span class="percentual">90%</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../../general-config/geral.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

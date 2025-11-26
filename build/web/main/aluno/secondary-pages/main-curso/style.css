@@ -1,0 +1,196 @@
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5em;
+  margin-top: 40px;
+  padding: 0 60px 50px 60px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s; 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.20);
+}
+
+.card .icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(50, 163, 189);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+.card .icon-wrapper i {
+  color: white;
+  font-size: 20px;
+}
+
+/* cores dos icones */
+
+.card.matematica .icon-wrapper {
+  background-color: #3B82F6; 
+}
+
+.card.portugues .icon-wrapper {
+  background-color: #F472B6; 
+}
+
+.card.historia .icon-wrapper {
+  background-color: #F59E0B; 
+}
+
+.card.biologia .icon-wrapper {
+  background-color: #34D399;
+}
+
+.atividades-counter {
+  display: flex;
+  margin-top: 10px ;
+  color: rgba(0, 0, 0, 0.509);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-content {
+  display: none; /* fica escondido até clicar */
+  padding: 20px 60px;
+  animation: fadeIn 0.25s ease;
+}
+
+.card-content button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 35px; /* antes: 25px */
+  font-size: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.card-content button i {
+  margin-right: 0; /* já tem o gap, não precisa isso */
+}
+
+.content-materia {
+  background: #E8F1FF; /* azul clarinho */
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 25px 0; /* separação do resto */
+}
+
+.content-materia span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1D4ED8; /* azul mais forte */
+}
+
+.content-materia p {
+  color: #1E40AF;
+  margin-top: 5px;
+}
+
+.wrapper-atividades {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 10px;
+}
+
+/* CARD */
+.card-atividades {
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.card-atividades:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* TÍTULO */
+.card-atividades .titulo-atividade {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+/* ENTREGA */
+.card-atividades .entrega {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #f8fafc00;
+  padding: 10px 12px;
+  border: none;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.356);
+  border-radius: 8px;
+
+  font-size: 15px;
+  color: #475569;
+}
+
+/* Relógio */
+.card-atividades .entrega i {
+  font-size: 16px;
+  color: #1E40AF;
+}
+
+/* STATUS */
+.status-entregue,
+.status-pendente {
+  margin-left: auto;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.status-entregue {
+  background-color: #10B981;
+}
+
+.status-pendente {
+  background-color: #EF4444;
+}
+
+
+.card-content.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+}

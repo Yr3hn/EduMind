@@ -1,0 +1,202 @@
+/* geral */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* login */
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1.5em;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 300px;
+  height: 350px;
+  padding: 15px;
+  z-index: 1001;
+  border-radius: 7px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+
+  justify-items: center; /* Centraliza tudo dentro do grid */
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.buttons button {
+  margin-top: 20px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #0000009d;
+  background: none;
+  border: 1px solid #0000005c;
+  font-size: 1rem;
+  width: 150px; 
+
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.inputs input {
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.614);
+  border-radius: 4px;
+  text-indent: 1px;
+  padding: 5px 10px;
+  margin-bottom: 8px;
+}
+
+.inputs p {
+  opacity: 50%;
+}
+
+.inputs button {
+  margin-top: 10px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #0000009d;
+  background: none;
+  border: 1px solid #0000005c;
+  font-size: 1rem;
+  width: 130px; 
+
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.buttons button:hover {
+  border: 1px solid #000000e3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.037);
+}
+
+.inputs button:hover {
+  border: 1px solid #000000e3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.037);
+}
+
+/* animação de fade */
+.wrapper {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.wrapper.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ondas */
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #3586ff;
+  overflow: hidden;
+}
+
+section .onda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(/login-page/img/wave.png);
+  background-size: 1000px 100px;
+}
+
+section .onda.ondas1 {
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+section .onda.ondas2 {
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+section .onda.ondas3 {
+  animation: animate3 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+
+section .onda.ondas4 {
+  animation: animate4 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: 0s;
+  bottom: 20px;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}

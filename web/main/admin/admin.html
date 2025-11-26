@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduMind - Painel Administrativo</title>
+
+  <!-- Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" aria-label="Barra lateral">
+    <div class="brand">
+      <div class="logo">EM</div>
+      <div class="brand-text">
+        <h1>EduMind</h1>
+        <small>Admin</small>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a href="#dashboard" class="menu-item active"><i class="fa-solid fa-chart-simple"></i><span>Dashboard</span></a>
+      <a href="#professores" class="menu-item"><i class="fa-solid fa-chalkboard-user"></i><span>Professores</span></a>
+      <a href="#alunos" class="menu-item"><i class="fa-solid fa-user-graduate"></i><span>Alunos</span></a>
+      <a href="#turmas" class="menu-item"><i class="fa-solid fa-school"></i><span>Turmas</span></a>
+      <a href="#disciplinas" class="menu-item"><i class="fa-solid fa-book"></i><span>Disciplinas</span></a>
+      <div class="menu-sep"></div>
+      <a id="btn-settings" class="menu-item"><i class="fa-solid fa-gear"></i><span>Configurações</span></a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <small>Painel • EduMind - Por: Pedro</small>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- NAVBAR -->
+    <header class="topbar">
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Pesquisar..." aria-label="Pesquisar" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <div class="top-actions">
+        <div class="user-info" title="Usuário">
+          <i class="fa-solid fa-user-circle"></i>
+          <span id="userName">Usuário</span>
+        </div>
+        <button id="btnLogout" class="btn-ghost" title="Sair"><i class="fa-solid fa-right-from-bracket"></i></button>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="content">
+      <!-- DASHBOARD -->
+      <section id="dashboard" class="panel active-panel">
+        <h2>Dashboard</h2>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <div class="card-body">
+              <small>Professores</small>
+              <strong id="count-professores">0</strong>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <div class="card-body">
+              <small>Alunos</small>
+              <strong id="count-alunos">0</strong>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-school"></i></div>
+            <div class="card-body">
+              <small>Turmas</small>
+              <strong id="count-turmas">0</strong>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-book"></i></div>
+            <div class="card-body">
+              <small>Disciplinas</small>
+              <strong id="count-disciplinas">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="welcome-card">
+          <h3>Bem-vindo ao Painel</h3>
+          <p>Use a barra lateral para navegar entre registros e editar cadastros. Este painel salva localmente (localStorage).</p>
+        </div>
+      </section>
+
+      <!-- PROFESSORES -->
+      <section id="professores" class="panel">
+        <h2>Professores</h2>
+
+        <div class="panel-grid">
+          <form id="form-professor" class="card form-card">
+            <h3>Novo Professor</h3>
+            <input name="nome" type="text" placeholder="Nome completo" required />
+            <input name="email" type="email" placeholder="E-mail" required />
+            <input name="disciplina" type="text" placeholder="Disciplina" required />
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Registrar</button>
+              <button type="button" id="limpar-professores" class="btn-ghost">Limpar todos</button>
+            </div>
+          </form>
+
+          <div class="card list-card">
+            <h3>Lista de Professores</h3>
+            <ul id="lista-professores" class="list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ALUNOS -->
+      <section id="alunos" class="panel">
+        <h2>Alunos</h2>
+
+        <div class="panel-grid">
+          <form id="form-aluno" class="card form-card">
+            <h3>Novo Aluno</h3>
+            <input name="nome" type="text" placeholder="Nome completo" required />
+            <input name="email" type="email" placeholder="E-mail" required />
+            <input name="turma" type="text" placeholder="Turma" required />
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Registrar</button>
+              <button type="button" id="limpar-alunos" class="btn-ghost">Limpar todos</button>
+            </div>
+          </form>
+
+          <div class="card list-card">
+            <h3>Lista de Alunos</h3>
+            <ul id="lista-alunos" class="list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TURMAS -->
+      <section id="turmas" class="panel">
+        <h2>Turmas</h2>
+
+        <div class="panel-grid">
+          <form id="form-turma" class="card form-card">
+            <h3>Nova Turma</h3>
+            <input name="nome" type="text" placeholder="Nome da turma" required />
+            <input name="ano" type="text" placeholder="Ano" required />
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Registrar</button>
+              <button type="button" id="limpar-turmas" class="btn-ghost">Limpar todos</button>
+            </div>
+          </form>
+
+          <div class="card list-card">
+            <h3>Lista de Turmas</h3>
+            <ul id="lista-turmas" class="list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCIPLINAS -->
+      <section id="disciplinas" class="panel">
+        <h2>Disciplinas</h2>
+
+        <div class="panel-grid">
+          <form id="form-disciplina" class="card form-card">
+            <h3>Nova Disciplina</h3>
+            <input name="nome" type="text" placeholder="Nome da disciplina" required />
+            <input name="codigo" type="text" placeholder="Código (ex: MAT101)" required />
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Registrar</button>
+              <button type="button" id="limpar-disciplinas" class="btn-ghost">Limpar todos</button>
+            </div>
+          </form>
+
+          <div class="card list-card">
+            <h3>Lista de Disciplinas</h3>
+            <ul id="lista-disciplinas" class="list"></ul>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="src/cript.js"></script>
+</body>
+</html>

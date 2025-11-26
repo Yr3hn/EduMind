@@ -1,0 +1,133 @@
+/* CONTAINER */
+.presencas-container {
+  padding: 20px;
+  margin-top: 5px;
+}
+
+/* CARDS RESUMO */
+.resumo-presencas {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.card-resumo {
+  flex: 1;
+  min-width: 180px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.card-resumo i {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card-resumo .titulo {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-resumo h2 {
+  margin-top: 5px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* CORES */
+.azul i { color: #2563eb; }
+.verde i { color: #16a34a; }
+.roxo i { color: #7c3aed; }
+.laranja i { color: #ea580c; }
+
+/* LISTA DE MATÉRIAS */
+.lista-materias {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.item-materia {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.materia-esq {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icone-materia {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* cores ícones */
+.icone-materia.azul { background: #2563eb; }
+.icone-materia.roxo { background: #7c3aed; }
+.icone-materia.laranja { background: #ea580c; }
+
+/* infos */
+.nome {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.faltas {
+  font-size: 13px;
+  color: #555;
+}
+
+/* direita */
+.materia-dir {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 150px;
+}
+
+.nota {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.barra {
+  flex: 1;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: #111827;
+  border-radius: 5px;
+}
+
+.percentual {
+  font-size: 13px;
+  color: #333;
+}
+
+.icone-materia i {
+  color: #fff;
+  font-size: 1.4rem;
+  z-index: 5;
+}
