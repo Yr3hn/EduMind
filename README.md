@@ -83,6 +83,8 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 
 ## 📞 Contato
 
-Seu Nome/Nome da Equipe - [contatoeduweb@gmail.com]
+Autores: Pablo Cardoso Alves da Silva / Henry Guilherme Barbosa de Araujo / Pedro Seudo Valenti 
+
+E-mail: [contatoeduweb@gmail.com]
 
 Link do Projeto: [https://github.com/Y3rhn/EduMind](https://github.com/Yr3hn/EduMind)
