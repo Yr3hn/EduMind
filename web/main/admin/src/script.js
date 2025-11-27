@@ -210,3 +210,68 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 
 /* ---------- inicial ---------- */
 refreshAll();
+
+// ===========================================
+// Lógica para Navegação de Abas (Manter)
+// ===========================================
+document.querySelectorAll('.menu-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Remove a classe 'active' de todos os itens do menu
+        document.querySelectorAll('.menu-item').forEach(el => el.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Esconde todos os painéis de conteúdo
+        document.querySelectorAll('.panel').forEach(panel => panel.classList.remove('active-panel'));
+        
+        // Mostra o painel correspondente ao href
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).classList.add('active-panel');
+    });
+});
+
+
+// ===========================================
+// Lógica para Cadastro de Professor (AJAX)
+// ===========================================
+const formProfessor = document.getElementById('form-professor');
+const msgProfessor = document.getElementById('msg-professor');
+
+if (formProfessor) {
+    formProfessor.addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede o envio HTTP padrão
+
+        const formData = new FormData(this); // Cria um objeto com os dados do formulário
+        
+        // Adiciona a ação para o servidor saber o que fazer
+        formData.append('acao', 'cadastrarProfessor'); 
+
+        // Limpa mensagens anteriores
+        msgProfessor.textContent = 'Processando...';
+        msgProfessor.style.color = '#333';
+
+        // Envia a requisição via Fetch API
+        fetch('professor-api.jsp', { // Novo arquivo JSP/Servlet que criaremos
+            method: 'POST',
+            body: new URLSearchParams(formData) // Converte FormData para o formato URL-encoded
+        })
+        .then(response => response.json()) // Espera uma resposta JSON do servidor
+        .then(data => {
+            if (data.sucesso) {
+                msgProfessor.textContent = data.mensagem;
+                msgProfessor.style.color = 'green';
+                formProfessor.reset(); // Limpa o formulário
+                // Aqui você pode adicionar o código para atualizar a lista de professores na tela
+            } else {
+                msgProfessor.textContent = data.mensagem || 'Erro ao cadastrar.';
+                msgProfessor.style.color = 'red';
+            }
+        })
+        .catch(error => {
+            console.error('Erro na requisição:', error);
+            msgProfessor.textContent = 'Falha na comunicação com o servidor.';
+            msgProfessor.style.color = 'red';
+        });
+    });
+}

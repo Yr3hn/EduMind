@@ -133,22 +133,39 @@
       </div>
     </main>
 
+    <!-- Modal de Alterar Senha -->
+    <div id="modalSenha" class="modal">
+      <div class="modal-content">
+        <h2>Alterar Senha</h2>
+
+        <label>Senha Atual</label>
+        <input
+          type="password"
+          id="senhaAtual"
+          placeholder="Digite sua senha atual"
+        />
+
+        <label>Nova Senha</label>
+        <input
+          type="password"
+          id="novaSenha"
+          placeholder="Digite a nova senha"
+        />
+
+        <label>Confirmar Nova Senha</label>
+        <input
+          type="password"
+          id="confirmaSenha"
+          placeholder="Confirme a nova senha"
+        />
+
+        <div class="modal-buttons">
+          <button id="cancelarSenha" class="btn-cancelar">Cancelar</button>
+          <button id="salvarSenha" class="btn-salvar">Salvar</button>
+        </div>
+      </div>
+    </div>
     <script src="../../../general-config/geral.js"></script>
     <script src="script.js"></script>
-
-    <script>
-      document
-        .getElementById("fileInput")
-        .addEventListener("change", function (event) {
-          const file = event.target.files[0];
-          if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-              document.getElementById("profileImage").src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-          }
-        });
-    </script>
   </body>
 </html>

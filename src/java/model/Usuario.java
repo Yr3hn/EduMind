@@ -1,26 +1,28 @@
 package model;
 
 public class Usuario {
-    private int idUser; // Mapeia para 'id' na tabela
-    private String nome; // Mapeia para 'nomeCompleto' na tabela
+
+    // Nome correto para combinar com o DAO e com a tabela 'usuario'
+    private int id; 
+    private String nomeCompleto; 
     private String email;
     private String rgm;
     private String senha;
     private String tipo;
     private int idCurso;
     private int idTurma;
-    
-    // CAMPOS QUE PRECISAM SER ADICIONADOS AO MODELO
-    private String telefone; 
-    private String endereco;
-    private String fotoCaminho; 
 
-    // Métodos Getters e Setters
-    public int getIdUser() { return idUser; }
-    public void setIdUser(int idUser) { this.idUser = idUser; }
+    // Campos adicionais opcionais
+    private String telefone;
+    private String endereco; 
+    private String foto; // compatível com a coluna 'foto' do banco
 
-    public String getNome() { return nome; }
-    public void setNome(String nome) { this.nome = nome; }
+    // Getters e Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getNomeCompleto() { return nomeCompleto; }
+    public void setNomeCompleto(String nomeCompleto) { this.nomeCompleto = nomeCompleto; }
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
@@ -39,14 +41,13 @@ public class Usuario {
 
     public int getIdTurma() { return idTurma; }
     public void setIdTurma(int idTurma) { this.idTurma = idTurma; }
-    
-    // NOVOS GETTERS E SETTERS (Mantenha estes)
+
     public String getTelefone() { return telefone; }
     public void setTelefone(String telefone) { this.telefone = telefone; }
 
     public String getEndereco() { return endereco; }
     public void setEndereco(String endereco) { this.endereco = endereco; }
 
-    public String getFotoCaminho() { return fotoCaminho; }
-    public void setFotoCaminho(String fotoCaminho) { this.fotoCaminho = fotoCaminho; }
+    public String getFoto() { return foto; }
+    public void setFoto(String foto) { this.foto = foto; }
 }
