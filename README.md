@@ -88,7 +88,7 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 Henry Guilherme Barbosa de Araujo (front end dev e design) 
 git: https://github.com/Yr3hn
 
-Pedro Seudo Valenti  (backend usando jsp/java || modelagem do banco de dados)
+Pedro Seudo Valenti  (backend usando jsp/java || modelagem e implementação do banco de dados)
 git: https://github.com/pedrosvalenti
 
 Pablo Cardoso Alves da Silva  (backend usando jsp/java || modelagem de banco de dados)
