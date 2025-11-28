@@ -83,13 +83,15 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 
 ## 📝 Creditos
 
-Henry Guilherme (front end dev e design) 
+// Autores // 
+
+Henry Guilherme Barbosa de Araujo (front end dev e design) 
 git: https://github.com/Yr3hn
 
-Pedro Seudo ()
+Pedro Seudo Valenti  ()
 git: https://github.com/pedrosvalenti
 
-Pablo Cardoso ()
+Pablo Cardoso Alves da Silva  ()
 git: https://github.com/pablocarss
 
 Link do Projeto: [https://github.com/Y3rhn/EduMind](https://github.com/Yr3hn/EduMind)
