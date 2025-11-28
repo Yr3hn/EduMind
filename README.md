@@ -6,13 +6,13 @@
 
 ## 🎯 Sobre o Projeto
 
-**EduMind** é uma plataforma robusta e completa de ensino remoto (e-learning) projetada para conectar administradores, professores e alunos em um ambiente virtual de aprendizado dinâmico e eficiente. O sistema oferece todas as ferramentas necessárias para a gestão de conteúdo, acompanhamento de desempenho e comunicação, simulando a experiência de uma sala de aula presencial no ambiente digital.
+**EduWeb** é uma plataforma robusta e completa de ensino remoto (e-learning) projetada para conectar administradores, professores e alunos em um ambiente virtual de aprendizado dinâmico e eficiente. O sistema oferece todas as ferramentas necessárias para a gestão de conteúdo, acompanhamento de desempenho e comunicação, simulando a experiência de uma sala de aula presencial no ambiente digital.
 
 O projeto foi desenvolvido com foco em uma arquitetura web full-stack, utilizando **Java (JSP/Servlets)** para o backend e **MySQL** para persistência de dados, garantindo escalabilidade e segurança.
 
 ## ✨ Funcionalidades Principais
 
-O EduMind é dividido em três portais principais, cada um com funcionalidades específicas para seu perfil de usuário:
+O EduWeb é dividido em três portais principais, cada um com funcionalidades específicas para seu perfil de usuário:
 
 ### 🌐 Acesso Geral
 
@@ -48,7 +48,7 @@ O EduMind é dividido em três portais principais, cada um com funcionalidades e
 
 ## 🚀 Como Executar o Projeto
 
-Para configurar e rodar o EduMind em seu ambiente local, siga os passos abaixo:
+Para configurar e rodar o EduWeb em seu ambiente local, siga os passos abaixo:
 
 ### Pré-requisitos
 
@@ -81,8 +81,15 @@ Certifique-se de ter instalado em sua máquina:
 
 Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 📞 Contato
+## 📞 Creditos
 
-Seu Nome/Nome da Equipe - [contatoeduweb@gmail.com]
+Henry Guilherme (front end dev e design) 
+git:
+
+Pedro Seudo ()
+git:
+
+Pablo ()
+git:
 
 Link do Projeto: [https://github.com/Y3rhn/EduMind](https://github.com/Yr3hn/EduMind)
